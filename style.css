@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(237, 12%, 33%);
+    font-size: 1.2rem;
+}
+
+.faq {
+    width: 100rem;
+    background-color: white;
+    height: 50rem;
+    display: flex;
+    border-radius: 2rem;
+}
+
+.faq-images {
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -260%;
+    position: relative;
+}
+
+.faq-images__mobile {
+    display: none;
+}
+
+.faq-images__box {
+    position: absolute;
+    top: 20rem;
+    left: -9.3rem;
+    z-index: 1;
+}
+
+.faq-questions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 6rem;
+}
+
+.faq-questions-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.faq-questions-item {
+    width: 70%;
+    margin-top: 2rem;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.faq-questions-item__h1 {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.faq-questions-item__h1:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.faq-questions-item__p {
+    color: hsl(0, 0%, 100%);
+    margin-top: 1rem;
+    display: none;
+}
+
+.display p {
+    display: block;
+    color: hsl(240, 6%, 50%);
+}
+
+.display h1 {
+    color: hsl(236, 17%, 18%);
+    font-weight: bold;
+}
+
+.display img {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1000px) {
+    
+    html {
+      font-size: 40%;  
+    }
+
+    .faq-images {
+        background-position: 110%;
+    }
+
+    .faq-images__box {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    .faq {
+        flex-direction: column;
+        width: 40rem;
+        height: 50rem;
+        justify-content: flex-start;
+    }
+
+    .faq-questions {
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 3rem;
+        margin-top: 0;
+    }
+
+    .faq-images {
+        background: none;
+    }
+
+    .faq-images__mobile {
+        display: block;
+        width: 60%;
+        position: absolute;
+        top: -10.5rem;
+        left: 20%;
+    }
+}
